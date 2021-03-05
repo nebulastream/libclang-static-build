@@ -44,6 +44,7 @@ set(LIBCLANG_LINK_LIBS
   clangIndex
   clangLex
   clangSema
+  clangCodeGen
   clangSerialization
   clangTooling
   clangARCMigrate
@@ -124,7 +125,6 @@ set(LIBCLANG_LINK_LIBS
   LLVMX86Desc
   LLVMX86Disassembler
   LLVMX86Info
-  LLVMX86Utils
   LLVMXCoreCodeGen
   LLVMXCoreDesc
   LLVMXCoreDisassembler
@@ -200,6 +200,12 @@ set(LIBCLANG_LINK_LIBS
   LLVMCFGuard
   LLVMFrontendOpenMP
   LLVMDemangle
+  LLVMExecutionEngine
+  LLVMPasses
+        LLVMAVRCodeGen LLVMAVRAsmParser LLVMAVRDisassembler LLVMAVRDesc LLVMAVRInfo
+        LLVMCoroutines
+        LLVMMCJIT
+        LLVMOrcJIT
   )
 if(MSVC)
   list(APPEND LIBCLANG_LINK_LIBS LLVMAVRCodeGen LLVMAVRAsmParser LLVMAVRDisassembler LLVMAVRDesc LLVMAVRInfo)
